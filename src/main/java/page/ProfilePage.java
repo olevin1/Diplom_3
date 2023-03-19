@@ -12,7 +12,7 @@ public class ProfilePage {
     // Кнопка "Выход"
     private final By exitButton = By.xpath(".//li/button[text()='Выход']");
     // Подсказка на странице Личного кабинета
-    public By infoHint = By.xpath(".//nav/p[text()='В этом разделе вы можете изменить свои персональные данные']");
+    private final By infoHint = By.xpath(".//nav/p[text()='В этом разделе вы можете изменить свои персональные данные']");
 
     public ProfilePage(WebDriver driver) {
         this.driver = driver;

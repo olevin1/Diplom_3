@@ -6,13 +6,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import page.*;
+import page.LoginPage;
+import page.MainPage;
+import page.ProfilePage;
 
 @RunWith(Parameterized.class)
 public class ExitTests extends BaseTest {
-    MainPage mainPage = new MainPage(driver);
-    ProfilePage profilePage = new ProfilePage(driver);
-    LoginPage loginPage = new LoginPage(driver);
+    private final MainPage mainPage = new MainPage(driver);
+    private final ProfilePage profilePage = new ProfilePage(driver);
+    private final LoginPage loginPage = new LoginPage(driver);
 
     public ExitTests(String browserDriver) {
         super(browserDriver);

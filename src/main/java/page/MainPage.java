@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage {
-    private static WebDriver driver;
+    private final WebDriver driver;
     /**
      * Хедер сайта
      */
@@ -19,7 +19,7 @@ public class MainPage {
      * Конструктор
      */
     //Заголовок "Соберите бургер"
-    public By constructorBurgerHeader = By.xpath(".//h1[text()='Соберите бургер']");
+    private final By constructorBurgerHeader = By.xpath(".//h1[text()='Соберите бургер']");
     //Раздел "Булки"
     private final By bunsSection = By.xpath(".//div[./span[text()='Булки']]");
     //Раздел "Соусы"
@@ -31,14 +31,14 @@ public class MainPage {
     //Кнопка "Оформить заказ"
     private final By checkoutButton = By.xpath(".//button[text()='Оформить заказ']");
     //Заголовок раздела "Булки"
-    public By bunsHeader = By.xpath(".//h2[text()='Булки']");
+    private final By bunsHeader = By.xpath(".//h2[text()='Булки']");
     //Заголовок раздела "Соусы"
-    public By saucesHeader = By.xpath(".//h2[text()='Соусы']");
+    private final By saucesHeader = By.xpath(".//h2[text()='Соусы']");
     //Заголовок раздела "Начинки"
-    public By fillingsHeader = By.xpath(".//h2[text()='Начинки']");
+    private final By fillingsHeader = By.xpath(".//h2[text()='Начинки']");
 
     public MainPage(WebDriver driver) {
-        MainPage.driver = driver;
+        this.driver = driver;
     }
 
     @Step("Найти элемент для подтверждения успешного входа")

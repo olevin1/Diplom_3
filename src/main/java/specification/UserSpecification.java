@@ -9,9 +9,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
 public class UserSpecification extends BasicSpecification {
-    private final static String CREATE_USER_PATH = "/api/auth/register";
-    private final static String AUTH_USER_PATH = "/api/auth/login";
-    private final static String DELETE_USER_PATH = "/api/auth/user";
+    private static final String CREATE_USER_PATH = "/api/auth/register";
+    private static final String AUTH_USER_PATH = "/api/auth/login";
+    private static final String DELETE_USER_PATH = "/api/auth/user";
 
     @Step("Создать пользователя")
     public void createUser(UserCreateDto user) {

@@ -10,7 +10,7 @@ public class RegistrationPage {
      * Описание элементов страницы регистрации
      */
     // Заголовок "Регистрация"
-    public By registrationHeader = By.xpath(".//div/h2[text()='Регистрация']");
+    private final By registrationHeader = By.xpath(".//div/h2[text()='Регистрация']");
     // Поле "Имя"
     private final By nameField = By.xpath(".//div[./label[text()='Имя']]/input[@name='name']");
     // Поле Email"
@@ -20,7 +20,7 @@ public class RegistrationPage {
     // Кнопка "Зарегистрироваться"
     private final By registerButton = By.xpath(".//button[text()='Зарегистрироваться']");
     // Подсказка "Некорректный пароль"
-    public By IncorrectPasswordHint = By.xpath(".//p[text()='Некорректный пароль']");
+    private final By incorrectPasswordHint = By.xpath(".//p[text()='Некорректный пароль']");
     //Гиперссылка "Войти"
     private final By loginHyperlink = By.xpath(".//a[text() = 'Войти']");
 
@@ -63,7 +63,7 @@ public class RegistrationPage {
 
     @Step("Найти подсказку, отображающуюся при вводе некорректного пароля")
     public Boolean incorrectPasswordHintDisplayed() {
-        return driver.findElement(IncorrectPasswordHint).isDisplayed();
+        return driver.findElement(incorrectPasswordHint).isDisplayed();
     }
 
     @Step("Регистрация пользователя")

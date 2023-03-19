@@ -13,10 +13,10 @@ import page.RegistrationPage;
 
 @RunWith(Parameterized.class)
 public class LoginTests extends BaseTest {
-    MainPage mainPage = new MainPage(driver);
-    LoginPage loginPage = new LoginPage(driver);
-    RegistrationPage registerPage = new RegistrationPage(driver);
-    PasswordRecoveryPage recoveryPage = new PasswordRecoveryPage(driver);
+    private final MainPage mainPage = new MainPage(driver);
+    private final LoginPage loginPage = new LoginPage(driver);
+    private final RegistrationPage registerPage = new RegistrationPage(driver);
+    private final PasswordRecoveryPage recoveryPage = new PasswordRecoveryPage(driver);
 
     public LoginTests(String browserDriver) {
         super(browserDriver);

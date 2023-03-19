@@ -10,9 +10,9 @@ import page.RegistrationPage;
 
 @RunWith(Parameterized.class)
 public class RegistrationTests extends BaseTest {
-    MainPage mainPage = new MainPage(driver);
-    LoginPage loginPage = new LoginPage(driver);
-    RegistrationPage registerPage = new RegistrationPage(driver);
+    private final MainPage mainPage = new MainPage(driver);
+    private final LoginPage loginPage = new LoginPage(driver);
+    private final RegistrationPage registerPage = new RegistrationPage(driver);
 
     public RegistrationTests(String browserDriver) {
         super(browserDriver);
