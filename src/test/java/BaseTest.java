@@ -18,7 +18,7 @@ public abstract class BaseTest {
     protected final WebDriver driver;
     protected final UserSpecification specification = new UserSpecification();
 
-    public BaseTest(String browserDriver){
+    public BaseTest(String browserDriver) {
         System.setProperty(
                 "webdriver.chrome.driver",
                 "src\\main\\resources\\" + browserDriver + ".exe"
@@ -30,8 +30,8 @@ public abstract class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @Parameterized.Parameters(name="driver: {0}")
-    public static Object[][] getDriver(){
+    @Parameterized.Parameters(name = "driver: {0}")
+    public static Object[][] getDriver() {
         return new Object[][]{
                 {"chromedriver"},
                 {"yandexdriver"}

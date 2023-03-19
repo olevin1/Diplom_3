@@ -12,9 +12,9 @@ import page.ProfilePage;
 
 @RunWith(Parameterized.class)
 public class TransitionWithAuthTests extends BaseTest {
-    MainPage mainPage = new MainPage(driver);
-    LoginPage loginPage = new LoginPage(driver);
-    ProfilePage profilePage = new ProfilePage(driver);
+    private final MainPage mainPage = new MainPage(driver);
+    private final LoginPage loginPage = new LoginPage(driver);
+    private final ProfilePage profilePage = new ProfilePage(driver);
 
     public TransitionWithAuthTests(String browserDriver) {
         super(browserDriver);

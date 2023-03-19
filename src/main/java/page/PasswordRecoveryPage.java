@@ -10,7 +10,7 @@ public class PasswordRecoveryPage {
      * Описание элементов страницы восстановления пароля
      */
     // Заголовок "Восстановление пароля"
-    public By recoverPasswordHeader = By.xpath(".//main/div/h2[text()='Восстановление пароля']");
+    private final By recoverPasswordHeader = By.xpath(".//main/div/h2[text()='Восстановление пароля']");
     // Поле "Email"
     private final By emailField = By.xpath(".//div[./label[text()='Email']]/input[@name='name']");
     // Кнопка "Восстановить"

@@ -9,8 +9,8 @@ import page.MainPage;
 
 @RunWith(Parameterized.class)
 public class TransitionWithoutAuthTests extends BaseTest {
-    MainPage mainPage = new MainPage(driver);
-    LoginPage loginPage = new LoginPage(driver);
+    private final MainPage mainPage = new MainPage(driver);
+    private final LoginPage loginPage = new LoginPage(driver);
 
     public TransitionWithoutAuthTests(String browserDriver) {
         super(browserDriver);
