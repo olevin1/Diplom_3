@@ -5,7 +5,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import specification.UserSpecification;
+import client.UserClient;
 
 import java.time.Duration;
 
@@ -16,7 +16,7 @@ public abstract class BaseTest {
     protected static String PASSWORD_VALID = RandomStringUtils.randomAlphanumeric(6, 10);
     protected final static String PASSWORD_INVALID = RandomStringUtils.randomAlphanumeric(1, 5);
     protected final WebDriver driver;
-    protected final UserSpecification specification = new UserSpecification();
+    protected final UserClient specification = new UserClient();
 
     public BaseTest(String browserDriver) {
         System.setProperty(
